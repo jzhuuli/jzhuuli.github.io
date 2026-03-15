@@ -1,0 +1,48 @@
+/* ─────────────────────────────────────────
+   nav.css — sticky top navigation bar
+   ───────────────────────────────────────── */
+
+nav {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  padding:         1.25rem 3rem;
+  border-bottom:   1px solid var(--warm-light);
+  background:      var(--warm-bg);
+  position:        sticky;
+  top:             0;
+  z-index:         100;
+}
+
+.nav-logo {
+  font-family:    var(--serif);
+  font-size:      1.1rem;
+  color:          var(--warm-ink);
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap:     2rem;
+}
+
+.nav-links a {
+  font-size:      0.85rem;
+  color:          var(--warm-mid);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor:         pointer;
+  transition:     color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  nav               { padding: 1rem 1.25rem; }
+  .nav-links        { gap: 1.25rem; }
+  .nav-links a      { font-size: 0.75rem; }
+}

@@ -1,0 +1,116 @@
+<!-- ─────────────────────────────────────────
+     sections/projects.html — Projects section
+     ───────────────────────────────────────── -->
+<section id="projects">
+  <div class="section-eyebrow">Selected work</div>
+  <h2 class="section-title">Projects &amp; Analytics</h2>
+  <p class="section-sub">
+    Applied analytics and data science projects spanning ML, NLP, and business intelligence.
+  </p>
+
+  <div class="projects-grid">
+
+    <div class="project-card" onclick="openProject('customer-analytics')">
+      <div class="project-num">01 / Customer Analytics</div>
+      <div class="project-title">Scalable Customer Interaction Analytics</div>
+      <div class="project-desc">
+        Engineered Spark pipelines on AWS EMR to process large customer communication
+        logs at scale. Delivered 50% improvement in query runtime and deployed models
+        to uncover customer behavior patterns.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Spark</span>
+        <span class="project-tag">AWS EMR</span>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">ML Models</span>
+      </div>
+      <!--<span class="project-link">View project →</span>-->
+      <a href="YOUR_GITHUB_URL" class="project-link" target="_blank" onclick="event.stopPropagation()">GitHub →</a>
+    </div>
+
+    <div class="project-card" onclick="openProject('fraud-detection')">
+      <div class="project-num">02 / Fraud Detection</div>
+      <div class="project-title">Enterprise Fraud Detection Capstone</div>
+      <div class="project-desc">
+        Built supervised ML models (Random Forest, XGBoost) to detect anomalies and
+        fraud in credit card transaction datasets. Designed business reports
+        interpreting fraud signals for non-technical stakeholders.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Random Forest</span>
+        <span class="project-tag">XGBoost</span>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Tableau</span>
+      </div>
+      <!-- <span class="project-link">View project →</span> -->
+      <a href="YOUR_GITHUB_URL" class="project-link" target="_blank" onclick="event.stopPropagation()">GitHub →</a>
+    </div>
+
+    <div class="project-card" onclick="openProject('fintech')">
+      <div class="project-num">03 / FinTech</div>
+      <div class="project-title">Data-Driven Credit Card Design</div>
+      <div class="project-desc">
+        Developed an information-based strategy for FiTech's credit card product
+        design. Optimized 12 product variations across 750,000 prospects using BK
+        scores, APR, and annual fees to maximize Customer Lifetime Value and profitability.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Customer Segmentation</span>
+        <span class="project-tag">CLV Analysis</span>
+        <span class="project-tag">Risk Modeling</span>
+        <span class="project-tag">Product Optimization</span>
+      </div>
+      <!-- <span class="project-link">View project →</span> -->
+      <a href="YOUR_GITHUB_URL" class="project-link" target="_blank" onclick="event.stopPropagation()">GitHub →</a>
+    </div>
+
+    <div class="project-card" onclick="openProject('smobile')">
+      <div class="project-num">04 / Churn Prediction</div>
+      <div class="project-title">Predicting Customer Churn — S-Mobile</div>
+      <div class="project-desc">
+        Built predictive churn models using logistic regression and advanced ML
+        techniques for Singapore's leading cellphone carrier. Developed proactive
+        retention strategies and quantified economic impact of targeted interventions.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Logistic Regression</span>
+        <span class="project-tag">Churn Prediction</span>
+        <span class="project-tag">Customer Retention</span>
+        <span class="project-tag">CLV Analysis</span>
+      </div>
+      <!-- <span class="project-link">View project →</span> -->
+      <a href="YOUR_GITHUB_URL" class="project-link" target="_blank" onclick="event.stopPropagation()">GitHub →</a>
+    </div>
+
+    <div class="project-card" onclick="openProject('intuit')">
+      <div class="project-num">05 / Marketing Analytics</div>
+      <div class="project-title">QuickBooks Upgrade Campaign — Intuit</div>
+      <div class="project-desc">
+        Analyzed response patterns from 75,000 businesses to predict likelihood of
+        upgrading to QuickBooks 3.0. Developed targeting strategies for wave-2
+        mailing campaigns to maximize conversion and optimize marketing spend.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Response Modeling</span>
+        <span class="project-tag">Campaign Optimization</span>
+        <span class="project-tag">Targeting Strategy</span>
+        <span class="project-tag">Marketing Analytics</span>
+      </div>
+      <!-- <span class="project-link">View project →</span> -->
+      <a href="YOUR_GITHUB_URL" class="project-link" target="_blank" onclick="event.stopPropagation()">GitHub →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Project Modal ── -->
+<div class="modal-overlay" id="project-modal" onclick="closeOnOverlay(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeProject()">✕</button>
+    <div class="modal-eyebrow" id="modal-eyebrow"></div>
+    <div class="modal-title"  id="modal-title"></div>
+    <div class="modal-tags"   id="modal-tags"></div>
+    <div class="modal-body"   id="modal-body"></div>
+    <div class="modal-footer" id="modal-footer"></div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jun Zhu</title>
+
+  <!-- ── Styles (order matters) ── -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/resume.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-logo">Jun Zhu</div>
+    <div class="nav-links">
+      <a href="#" onclick="show('about')"    id="nav-about"    class="active">About</a>
+      <a href="#" onclick="show('projects')" id="nav-projects">Projects</a>
+      <a href="#" onclick="show('resume')"   id="nav-resume">Resume</a>
+      <a href="#" onclick="show('contact')"  id="nav-contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── Sections (each lives in its own file) ── -->
+  <!-- To add or remove a section:
+       1. Create/delete the file in sections/
+       2. Add/remove the <script> tag below
+       3. Add/remove the nav link above              -->
+
+  <div id="sections-mount"></div>
+
+  <!-- ── JS ── -->
+  <script src="js/main.js"></script>
+  <script>
+    // Load each section HTML file into the mount point
+    const sections = ['about', 'projects', 'resume', 'contact'];
+    const mount = document.getElementById('sections-mount');
+
+    Promise.all(
+      sections.map(name =>
+        fetch(`sections/${name}.html`)
+          .then(r => r.text())
+      )
+    ).then(htmlChunks => {
+      mount.innerHTML = htmlChunks.join('\n');
+    });
+  </script>
+
+<script src="js/projects.js"></script>
+
+</body>
+</html>

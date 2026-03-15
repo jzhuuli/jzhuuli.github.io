@@ -1,0 +1,101 @@
+/* ─────────────────────────────────────────
+   resume.css — Résumé / Experience styles
+   ───────────────────────────────────────── */
+
+.resume-cols {
+  display:               grid;
+  grid-template-columns: 2fr 1fr;
+  gap:                   4rem;
+}
+
+.resume-block {
+  margin-bottom: 2.5rem;
+}
+
+.resume-block-title {
+  font-family:    var(--mono);
+  font-size:      0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          var(--accent);
+  border-bottom:  1px solid var(--warm-light);
+  padding-bottom: 0.5rem;
+  margin-bottom:  1.25rem;
+}
+
+.resume-entry {
+  margin-bottom:  1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom:  1px dashed var(--warm-light);
+}
+
+.resume-entry:last-child {
+  border-bottom:  none;
+  margin-bottom:  0;
+  padding-bottom: 0;
+}
+
+.resume-role {
+  font-weight: 600;
+  font-size:   0.95rem;
+  color:       var(--warm-ink);
+}
+
+.resume-company {
+  font-size:   0.9rem;
+  color:       var(--accent);
+  font-family: var(--serif);
+  font-style:  italic;
+}
+
+.resume-date {
+  font-family:    var(--mono);
+  font-size:      0.72rem;
+  color:          var(--warm-mid);
+  margin-top:     2px;
+  margin-bottom:  0.4rem;
+  letter-spacing: 0.05em;
+}
+
+.resume-desc {
+  font-size:   0.85rem;
+  color:       var(--warm-mid);
+  line-height: 1.7;
+}
+
+/* Skills sidebar */
+.skill-group {
+  margin-bottom: 1.25rem;
+}
+
+.skill-group-name {
+  font-size:     0.8rem;
+  font-weight:   600;
+  color:         var(--warm-ink);
+  margin-bottom: 0.4rem;
+}
+
+.skill-pills {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       6px;
+}
+
+.skill-pill {
+  background:    var(--accent-soft);
+  color:         var(--accent);
+  font-size:     0.72rem;
+  font-family:   var(--mono);
+  padding:       3px 9px;
+  border-radius: 20px;
+}
+
+.highlights {
+  font-size:   0.85rem;
+  color:       var(--warm-mid);
+  line-height: 1.9;
+}
+
+@media (max-width: 700px) {
+  .resume-cols { grid-template-columns: 1fr; gap: 0; }
+}

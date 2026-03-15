@@ -1,0 +1,118 @@
+/* ─────────────────────────────────────────
+   about.css — About / Bio section styles
+   ───────────────────────────────────────── */
+
+.about-header {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   4rem;
+  align-items:           start;
+  margin-bottom:         4rem;
+  padding-bottom:        4rem;
+  border-bottom:         1px solid var(--warm-light);
+}
+
+.about-eyebrow {
+  font-family:    var(--mono);
+  font-size:      0.75rem;
+  color:          var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom:  1rem;
+}
+
+.about-name {
+  font-family:   var(--serif);
+  font-size:     3.2rem;
+  line-height:   1.15;
+  margin-bottom: 1.5rem;
+  font-weight:   400;
+}
+
+.about-name em {
+  color:      var(--accent);
+  font-style: italic;
+}
+
+.about-bio-row {
+  display:     flex;
+  align-items: center;
+  gap:         1.25rem;
+  margin-top:  0.25rem;
+}
+
+.about-photo {
+  width:         90px;
+  height:        90px;
+  border-radius: 50%;
+  object-fit:    cover;
+  flex-shrink:   0;
+  border:        3px solid var(--warm-light);
+}
+
+.about-bio {
+  font-size:   1rem;
+  color:       var(--warm-mid);
+  line-height: 1.85;
+  max-width:   420px;
+}
+
+.about-sidebar-label {
+  font-family:    var(--mono);
+  font-size:      0.7rem;
+  color:          var(--warm-mid);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom:  0.75rem;
+  margin-top:     1.75rem;
+}
+
+.about-sidebar-label:first-child {
+  margin-top: 0;
+}
+
+.about-sidebar-value {
+  font-size:   0.95rem;
+  color:       var(--warm-ink);
+  line-height: 1.6;
+}
+
+.tag-row {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       8px;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  background:     var(--accent-soft);
+  color:          var(--accent);
+  font-size:      0.75rem;
+  font-family:    var(--mono);
+  padding:        4px 10px;
+  border-radius:  4px;
+  letter-spacing: 0.03em;
+}
+
+.about-quote {
+  font-family:  var(--serif);
+  font-size:    1.25rem;
+  font-style:   italic;
+  line-height:  1.7;
+  color:        var(--warm-mid);
+  border-left:  3px solid var(--accent-mid);
+  padding-left: 1.5rem;
+  margin:       2rem 0;
+}
+
+.about-body {
+  color:      var(--warm-mid);
+  font-size:  0.95rem;
+  line-height: 1.85;
+  max-width:  620px;
+}
+
+@media (max-width: 700px) {
+  .about-header { grid-template-columns: 1fr; gap: 2rem; }
+  .about-name   { font-size: 2.2rem; }
+}

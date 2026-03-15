@@ -1,0 +1,86 @@
+/* ─────────────────────────────────────────
+   variables.css — design tokens & base reset
+   ───────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Nunito+Sans:wght@300;400;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --warm-bg:      #FAF7F2;
+  --warm-ink:     #1C1917;
+  --warm-mid:     #78716C;
+  --warm-light:   #E7E0D8;
+  --accent:       #B45309;
+  --accent-soft:  #FEF3C7;
+  --accent-mid:   #D97706;
+
+  /* Typography */
+  --serif: 'Lora', Georgia, serif;
+  --mono:  'DM Mono', monospace;
+  --sans:  'Nunito Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:  var(--warm-bg);
+  color:       var(--warm-ink);
+  font-family: var(--sans);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* Shared section wrapper */
+section {
+  display:   none;
+  padding:   4rem 3rem;
+  max-width: 900px;
+  margin:    0 auto;
+  animation: fadeIn 0.4s ease;
+}
+
+section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Shared section header */
+.section-eyebrow {
+  font-family:    var(--mono);
+  font-size:      0.75rem;
+  color:          var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom:  0.5rem;
+}
+
+.section-title {
+  font-family:   var(--serif);
+  font-size:     2rem;
+  font-weight:   400;
+  margin-bottom: 0.75rem;
+}
+
+.section-sub {
+  color:         var(--warm-mid);
+  font-size:     0.95rem;
+  margin-bottom: 3rem;
+  max-width:     500px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  section { padding: 2.5rem 1.25rem; }
+}
